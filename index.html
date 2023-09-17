@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Code Snippet Creator | Code Whispers ASMR1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/monokai.min.css">
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
+        </link>
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="snippet-container">
+            <div class="snippet-header">
+                <div class="snippet-stoplights">
+                    <span class="stoplight stoplight-close"></span>
+                    <span class="stoplight stoplight-minimize"></span>
+                    <span class="stoplight stoplight-maximize"></span>
+                </div>
+                <div class="snippet-title">
+                </div>
+                <div class="spacer"></div>
+            </div>
+            <div class="snippet-editor">
+                <textarea id="editor">var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
+    mode: "javascript",
+    lineNumbers: true,
+});
+editor.save()</textarea>
+            </div>
+        </div>
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.js">
+        </script>
+        <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/mode/javascript/javascript.min.js">
+        </script>
+        <script src="./script.js"></script>
+    </body>
+</html>

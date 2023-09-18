@@ -8,13 +8,12 @@ var editor = CodeMirror.fromTextArea(document.getElementById('editor'), {
 
 document.onclick = async event => {
     const c = document.querySelector('body');
-    html2canvas(c, { allowTaint: true}).then( canvas => {
-        // document.body.appendChild(canvas);
-       // var link = document.createElement("a");
-       //  document.body.appendChild(link);
-       //  link.download = "html_image.jpg";
-       //  link.href = canvas.toDataURL();
-       //  link.target = '_blank';
-       //  link.click(); 
+
+    domtoimage.toJpeg(c, { quality: 0.95 })
+    .then(function (dataUrl) {
+        var link = document.createElement('a');
+        link.download = 'my-image-name.jpeg';
+        link.href = dataUrl;
+        link.click();
     });
 }

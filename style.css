@@ -110,10 +110,11 @@ main {
 }
 
 .snippet-editor {
-    padding: 0 16px;
+    padding: 0 16px 16px;
 }
 
 .CodeMirror {
     font-family: 'Hack', monospace;
     font-size: 14px;
+    height: auto;
 }

@@ -52,7 +52,7 @@ main {
 .snippet-wrapper {
     width: 650px;
     padding: 56px;
-    background-color: rgba(171, 184, 195, 1);
+    background:linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248));
 }
 
 .snippet-container {

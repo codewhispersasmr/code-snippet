@@ -13,43 +13,46 @@
     </head>
     <body>
         <header>
-            <div class="language-select">
-                Select Language
-                <select id="language">
-                    <option value="javascript" selected>Javascript</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                    <option value="application/x-httpd-php">PHP</option>
-                    <option value="phython">Phyton</option>
-                </select>
-            </div>
-            <div class="spacer"></div>
             <div class="download">
-                <button type="button">Download</button>
+                <button id="download" type="button">Download</button>
             </div>
         </header>
-        <div class="snippet-container">
-            <div class="snippet-header">
-                <div class="snippet-stoplights">
-                    <span class="stoplight stoplight-close"></span>
-                    <span class="stoplight stoplight-minimize"></span>
-                    <span class="stoplight stoplight-maximize"></span>
+        <main>
+            <div class="snippet-wrapper">
+                <div class="snippet-container">
+                    <div class="snippet-header">
+                        <div class="snippet-stoplights">
+                            <span class="stoplight stoplight-close"></span>
+                            <span class="stoplight stoplight-minimize"></span>
+                            <span class="stoplight stoplight-maximize"></span>
+                        </div>
+                        <div class="snippet-title" contenteditable="true" spellcheck="false"></div>
+                        <div class="spacer"></div>
+                    </div>
+                    <div class="snippet-editor">
+                        <textarea id="editor">// login
+fetch('https://example.com/authenticate', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ 
+        username: 'CodeWhispers'
+        password: '12345' 
+    })
+}).then(response => response.json()).then(data => {
+    console.log(data);
+}).catch(error => {
+    console.error('Error:', error);
+});</textarea>
+                    </div>
                 </div>
-                <div class="snippet-title">test
-                </div>
-                <div class="spacer"></div>
             </div>
-            <div class="snippet-editor">
-                <textarea id="editor">// type you code here and take a screen shot!</textarea>
-            </div>
-        </div>
+        </main>
         <script type="text/javascript"
           src="https://codemirror.net/5/lib/codemirror.js">
         </script>
-        <script src="https://codemirror.net/5/mode/clike/clike.js"></script>
         <script src="https://codemirror.net/5/mode/javascript/javascript.js"></script>
-        <script src="https://codemirror.net/5/mode/css/css.js"></script>
-        <script src="https://codemirror.net/5/mode/php/php.js"></script>
          <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
         <script src="./script.js"></script>
     </body>

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-
+@import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css');
 
 :root {
     --close: #ff6159;
@@ -8,7 +7,6 @@
     --bg: #d2d2d2;
     --header-bg: #272822;
     --fg: #fff;
-    --radius: 6px;
 }
 
 * {
@@ -19,33 +17,48 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(135deg, #ff914d 0%, #004AAD 100%);
-    font-family: monospace;
+    font-family: 'Hack', sans-serif;
+    background-color: var(--header-bg);
 }
 
 header {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: var(--header-bg);
+    justify-content: end;
+    padding: 10px 40px;
     color: var(--fg);
+}
+
+#download {
+    padding: 8px 16px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #ff914d;
+    border: 1px solid #ff914d;
+    cursor: pointer;
 }
 
 .spacer {
     flex: 1;
 }
 
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.snippet-wrapper {
+    width: 650px;
+    padding: 56px;
+    background-color: rgba(171, 184, 195, 1);
+}
+
 .snippet-container {
-    position: absolute;
-    min-width: 500px;
     background-color: var(--header-bg);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 8px 21px -4px rgba(0,0,0,0.41);
-    -webkit-box-shadow: 0px 8px 21px -4px rgba(0,0,0,0.41);
-    -moz-box-shadow: 0px 8px 21px -4px rgba(0,0,0,0.41);
-    border-radius: 8px;
+    box-shadow: 0 20px 68px rgba(0, 0, 0, 0.55);
+    border-radius: 5px;
     overflow: hidden;
 }
 
@@ -62,6 +75,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: 50px;
+    cursor: text;
+    outline: none;
 }
 
 .snippet-stoplights {
@@ -93,7 +109,11 @@ header {
     background-color: var(--maximize);
 }
 
-/* .CodeMirror { */
-/*     resize: vertical; */
-/*     overflow: auto !important; */
-/* } */
+.snippet-editor {
+    padding: 0 16px;
+}
+
+.CodeMirror {
+    font-family: 'Hack', monospace;
+    font-size: 14px;
+}

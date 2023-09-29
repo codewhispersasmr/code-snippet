@@ -18,24 +18,32 @@
 body {
     height: 100vh;
     font-family: 'Hack', sans-serif;
-    background-color: var(--header-bg);
+    background-color: #fff;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: end;
-    padding: 10px 40px;
+    margin: 0 auto;
+    padding: 10px 0px;
     color: var(--fg);
+    width: 650px;
 }
 
 #download {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: #fff;
-    color: #ff914d;
-    border: 1px solid #ff914d;
+    color: #a58efb;
+    font-weight: bold;
+    border: 1px solid #a58efb;
     cursor: pointer;
+}
+
+#download:hover {
+    background-color: #a58efb;
+    color: #fff;
 }
 
 .spacer {
@@ -46,13 +54,22 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding-top: 50px;
+}
+
+h1 {
+    color: rgb(165, 142, 251);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
 }
 
 .snippet-wrapper {
     width: 650px;
     padding: 56px;
     background:linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248));
+    border: 2px solid #fff;
 }
 
 .snippet-container {

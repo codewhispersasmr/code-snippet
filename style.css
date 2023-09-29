@@ -1,12 +1,14 @@
 @import url('https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css');
 
 :root {
+    --snippet-bg: #272822;
     --close: #ff6159;
     --minimize: #ffbd2e;
     --maximize: #28c941;
-    --bg: #d2d2d2;
-    --header-bg: #272822;
-    --fg: #fff;
+    --bg: #ffffff;
+    --fg: #ffffff;
+    --primary: #a58efb;
+    --primary1: #e9bff8;
 }
 
 * {
@@ -18,7 +20,7 @@
 body {
     height: 100vh;
     font-family: 'Hack', sans-serif;
-    background-color: #fff;
+    background-color: --var(--bg);
 }
 
 header {
@@ -34,16 +36,16 @@ header {
 #download {
     padding: 8px 16px;
     border-radius: 5px;
-    background-color: #fff;
-    color: #a58efb;
+    background-color: var(--bg);
+    color: var(--primary);
     font-weight: bold;
-    border: 1px solid #a58efb;
+    border: 1px solid var(--primary);
     cursor: pointer;
 }
 
 #download:hover {
-    background-color: #a58efb;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--fg);
 }
 
 .spacer {
@@ -59,7 +61,7 @@ main {
 }
 
 h1 {
-    color: rgb(165, 142, 251);
+    color: var(--primary);
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: center;
@@ -68,12 +70,12 @@ h1 {
 .snippet-wrapper {
     width: 650px;
     padding: 56px;
-    background:linear-gradient(140deg, rgb(165, 142, 251), rgb(233, 191, 248));
-    border: 2px solid #fff;
+    background: linear-gradient(140deg, var(--primary), var(--primary1));
+    border: 2px solid var(--fg);
 }
 
 .snippet-container {
-    background-color: var(--header-bg);
+    background-color: var(--snippet-bg);
     box-shadow: 0 20px 68px rgba(0, 0, 0, 0.55);
     border-radius: 5px;
     overflow: hidden;
@@ -81,7 +83,7 @@ h1 {
 
 .snippet-header {
     height: 50px;
-    background-color: var(--header-bg);
+    background-color: var(--snippet-bg);
     color: var(--fg);
     padding: 2px 18px;
     display: flex;
@@ -109,7 +111,6 @@ h1 {
     width: 15px;
     height: 15px;
     display: inline-block;
-    background-color: #000;
     margin-right: 8px;
     border-radius: 50%;
 }
